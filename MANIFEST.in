@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_randoM117/templates *
+recursive-include octoprint_randoM117/translations *
+recursive-include octoprint_randoM117/static *

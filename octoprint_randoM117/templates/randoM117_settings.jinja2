@@ -1,0 +1,38 @@
+<h3>{{ _('randoM17 Configuration') }}</h3>
+
+<form class="form-horizontal">
+        <p>{{ _('
+		This plugin will grab a single andom line from the file listed below and<br />
+		send it over to the printer upon first connect as a M117 command.<br />
+		A new quote is retrieved every time the service is restarted.
+        ') }}</p>
+
+	<div class="control-group">
+		<label class="control-label">{{ _('URL/File') }}</label>
+		<div class="controls">
+			<input type="text" class="input-block-level" data-bind="value: settings.plugins.randoM117.url">
+			<span class="help-inline">This file needs to be stored somewhere and each line must be seperated by a unix newline.</span>
+		</div>
+
+		<label class="control-label">{{ _('Use local file') }}</label>
+		<div class="controls">
+			<label class="checkbox">
+				<input type="checkbox" data-bind="checked: settings.plugins.randoM117.uselocalfile">
+				<span class="help-inline">Instead of a URL, checking this will allow local files to be loaded instead.</span>
+			</label>
+		</div>
+
+		<label class="control-label">{{ _('Get new quote on save') }}</label>
+		<div class="controls">
+			<label class="checkbox">
+				<input type="checkbox" data-bind="checked: settings.plugins.randoM117.getnewquote">
+			</label>
+		</div>
+
+		<label class="control-label">{{ _('Current Quote') }}</label>
+		<div class="controls">
+			<input type="text" class="input-block-level" data-bind="value: settings.plugins.randoM117.lastquote" readonly>
+		</div>
+
+	</div>
+</form>
